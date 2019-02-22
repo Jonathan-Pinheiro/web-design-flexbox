@@ -1,46 +1,126 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
 * {
+     /*
+    displays
+    dimencionamento
+    fontes
+    cores
+    bordas
+    */
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    
+    font-family: 'PT Sans', sans-serif;
 }
+
+/*Header*/
 
 header {
     display: flex;
-    justify-content: space-between;
-    padding: 0 8%;
-    height: 10vh;
+    padding: 5px 5px 0 5px;
     background-color: black;
 }
 
-header img {
-    display: flex;
-    height: 9vh;
-    margin-top: 0.4%;
+header i {
+    color: white;
+    font-size: 40px;
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    
-    width: 30%;
-
-    padding-bottom: 0.5%;
-    margin-right: 7%;
+header img {
+    height: 50px;
+    margin: 0 auto;
+    padding-right: 33px;
 }
 
 header nav a {
-    padding: 45px 10px 0 10px;
+    display: none;
     text-decoration: none;
     color: white;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'PT Sans', sans-serif;
 }
 
-header nav a:hover {
-    background-color: orangered;
-    border-radius: 0 0 13px 13px;
+/*Fim Header*/
+
+/*Main*/
+
+main section figure img {
+    display: flex;
+    padding: 5px;
+    margin: 10px auto;
+    height: 170px;
 }
+
+h2 {
+    padding: 10px;
+    font-size: 2rem;
+    color: orangered;
+}
+
+p {
+    padding: 10px;
+    color: rgb(102, 102, 102);
+}
+
+#botao {
+    padding: 20px;
+}
+
+#sessaoum {
+    border-bottom: 2px dotted rgb(102, 102, 102);
+    margin: 0 10px 20px 10px;
+}
+
+main section article a {
+    padding: 4px 7px 4px 7px;
+    text-decoration: none;
+    background-color: orangered;
+    border-radius: 5px;
+    color: white;
+}
+
+#trescaixascentrais {
+    border: 1px solid rgb(102, 102, 102);
+}
+
+h3 {
+    padding: 5px 0 5px 10px;
+    background-color: orangered;
+
+    color: white;
+}
+
+#imagenscaixascentrais {
+    height: 90px;
+    float: left;
+    margin: 5px;
+}
+
+/*Fim Main*/
+
+/*Footer*/
+
+footer {
+    margin-top: 20px;
+    background-color: black;
+}
+
+footer p {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+footer img {
+    position: relative;
+    left: 20px;
+    bottom: 20px;
+    margin-top: 5px;
+}
+
+
+
+
+
