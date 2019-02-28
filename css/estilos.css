@@ -17,12 +17,20 @@ body {
     font-family: 'PT Sans', sans-serif;
 }
 
+/*Celular*/
+
 /*Header*/
 
 header {
     display: flex;
+    position: relative;
     padding: 5px 5px 0 5px;
     background-color: black;
+}
+
+label {
+    color: white;
+    font-size: 0.8rem;
 }
 
 header i {
@@ -36,11 +44,45 @@ header img {
     padding-right: 33px;
 }
 
-header nav a {
+header input:checked ~ nav {
+    left: 0;
+}
+
+input {
     display: none;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    top: 54px;
+    left: -100%;
+    background-color: black;
+
+    transition: left 0.7s;
+}
+
+#x {
+    color: orangered;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+header nav a {
+    text-align: center;
     text-decoration: none;
     color: white;
     font-family: 'PT Sans', sans-serif;
+}
+
+header nav a:hover {
+    background-color: orangered;
+    border-radius: 10px;
 }
 
 /*Fim Header*/
@@ -48,10 +90,24 @@ header nav a {
 /*Main*/
 
 main section figure img {
-    display: flex;
     padding: 5px;
     margin: 10px auto;
     height: 170px;
+}
+
+#sessaoum {
+    border-bottom: 2px dotted rgb(102, 102, 102);
+    margin: 20px 10px 20px 10px;
+}
+
+main section article a {
+    display: inline-block;
+    padding: 4px 7px 4px 7px;
+    background-color: orangered;
+    text-decoration: none;
+    color: white;
+    margin: 10px 10px 15px 10px;
+    border-radius: 7px;
 }
 
 h2 {
@@ -65,25 +121,12 @@ p {
     color: rgb(102, 102, 102);
 }
 
-#botao {
-    padding: 20px;
-}
-
-#sessaoum {
-    border-bottom: 2px dotted rgb(102, 102, 102);
-    margin: 0 10px 20px 10px;
-}
-
-main section article a {
-    padding: 4px 7px 4px 7px;
-    text-decoration: none;
-    background-color: orangered;
-    border-radius: 5px;
-    color: white;
-}
-
 #trescaixascentrais {
     border: 1px solid rgb(102, 102, 102);
+}
+
+#sessaodois {
+    padding: 0 10px 0 10px;
 }
 
 h3 {
@@ -120,8 +163,10 @@ footer img {
     margin-top: 5px;
 }
 
+/*Tablets*/
+
 @media screen and (min-width: 768px) {
-    header{
+    header {
         height: 80px;
     }
 
@@ -129,15 +174,109 @@ footer img {
         height: 70px;
     }
 
+    input {
+        display: none;
+    }
+
+    header nav {
+        display: flex;
+        top: 70px;
+        left: -100%;
+    }
+
     header i {
        font-size: 60px;
     }
 
-    header img {
-        height: 100px;
+    main section figure img {
+        height: 300px;
     }
 }
 
+/*Computador*/
 
+@media screen and (min-width: 992px) {
+    header label i {
+        display: none !important;
+    }
 
+    header {
+        justify-content: space-between;
+        padding-bottom: 0.2%;
+        height: 10vh;
+    }
+    
+    header img {
+        position: absolute;
+        padding-right: 0;
+        padding-left: 8%;
+        margin: 0;
+        height: 9vh;
+    }
+
+    header nav label {
+        display: none;
+    }
+    
+    header nav {
+        width: auto;
+        flex-direction: row;
+        position: static;
+        margin-right: 150px;
+    }
+
+    header nav a {
+        padding: 45px 15px 0px 15px;
+        color: white;
+        text-decoration: none;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    /*pseudo classes*/
+    header nav a:hover {
+    background-color: #fe3500;
+    border-radius: 0 0 13px 13px;
+    }
+    
+    main {
+        padding: 0 8% 0 8%;
+    }
+    
+    #sessaoum {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main section figure img {
+        height: 400px;
+        margin-left: 100px;
+    }
+
+    #artigoum {
+        margin-left: 150px;
+    }
+
+    main section article h2 {
+        display: inline-block;
+        font-size: 2.5rem;
+        text-align: right;
+    }
+
+    #pgum {
+        font-size: 1.5rem;
+    }
+    
+    main section article a {
+        padding: 10px 15px 10px 15px;
+    }
+
+    #sessaodois {
+        display: flex;
+        justify-content:space-between;
+    }
+
+    #trescaixascentrais {
+        width: 450px;
+    }
+}
 
